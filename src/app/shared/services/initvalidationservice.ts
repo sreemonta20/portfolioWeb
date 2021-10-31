@@ -9,7 +9,7 @@ export class initvalidationservice {
   constructor(private router: Router) {
   }
 
-  pathValidator(pathname){
+  pathValidator(pathname: any){
     if (localStorage.getItem('isLoggedin') === null){
       this.router.navigate(['/login']);
     }
@@ -22,7 +22,7 @@ export class initvalidationservice {
   validateLoggedUser() {
     this.rowEntity = {};
     if (localStorage.getItem('isLoggedin')) {
-      this.rowEntity = JSON.parse(localStorage.getItem('loggedUser'));
+      this.rowEntity = JSON.parse(localStorage.getItem('loggedUser') || '{}');
     }
     else {
       localStorage.clear();
@@ -32,7 +32,7 @@ export class initvalidationservice {
 
   getAuthenticatedUser(): any {
 
-    return JSON.parse(localStorage.getItem('loggedUser'));
+    return JSON.parse(localStorage.getItem('loggedUser') || '{}');
   }
 
   isUserLoggedIn(): boolean {

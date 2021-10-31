@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent  {
-  title = 'pfsbhowmikv1';
+  title = 'portfolioWeb';
   // message: 'Welcome';
 }
 // export class AppComponent  implements OnInit {
