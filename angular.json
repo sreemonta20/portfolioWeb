@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "pfsbhowmikv1": {
+    "portfolioWeb": {
       "projectType": "application",
       "schematics": {},
       "root": "",
